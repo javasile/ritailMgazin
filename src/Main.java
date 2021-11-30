@@ -28,7 +28,7 @@ public class Main {
                         readFile ();
                         break;
                     case 2:
-                        writeFile(readFile ());
+
                         break;
                     case 3:
                         System.out.println ("The list is empty!");

@@ -28,6 +28,7 @@ public class ProductDetail {
 
     }
 
+
     public int getStock() {
         return stock;
     }

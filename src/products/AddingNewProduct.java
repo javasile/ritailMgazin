@@ -1,5 +1,4 @@
 package products;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,23 +12,26 @@ public class AddingNewProduct {
     public static void adingTheProduct() {
         try {
 
+//            List<Treadmill>list = readFile ();
             readFile ();
-            writeFile(readFile ());
+//            writeFile (list);
 
         }catch (Exception e){
             e.printStackTrace ();
         }
     }
 
-    public static List<Treadmill> readFile() {
+    public static List<ProductDetail> readFile() {
 
-        List<Treadmill> list = new ArrayList<> ();
+        List<ProductDetail> list = new ArrayList<> ();
 
 
         try {
 
             Files.lines(Path.of (productDoc ))
-                    .forEach (lines -> System.out.println ());
+                    .map(line -> line.split ("||"))
+                    .map (line -> new ProductDetail (Integer.parseInt (line[0]), line[1], (Double.parseDouble (line[2])), Integer.parseInt (line[3]), line[4], line[5], line[6], line[7], line[8]))
+                    .forEach (list::add);
 
         }catch (Exception e) {
             e.printStackTrace ();
