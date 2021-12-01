@@ -42,7 +42,7 @@ public class AddingNewProduct {
 
     public static void writeFile(List<ProductDetail> list){
 
-       ProductDetail newProduct = new  NewProduct().Product ();
+       ProductDetail newProduct = NewProduct.Product ();
        Object listOfProducts = newProduct.toString ();
        StringBuilder content = new StringBuilder ();
        list.forEach (treadmill -> content.append (treadmill.toString ()).append ("\n"));

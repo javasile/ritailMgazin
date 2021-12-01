@@ -104,7 +104,7 @@ public class ProductDetail {
 
     @Override
     public String toString() {
-        return  SKU +
+        return   SKU +
                 " :.: " + productName  +
                 " :.: " + price +
                 " :.: " + stock +

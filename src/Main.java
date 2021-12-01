@@ -1,3 +1,7 @@
+import products.AddingNewProduct;
+import products.ProductDetail;
+
+import java.util.List;
 import java.util.Scanner;
 
 import static products.AddingNewProduct.*;
@@ -21,31 +25,32 @@ public class Main {
                     "\n**********************************************" +
                     "\n * Enter the number of the app you need: ");
 
-                menu = scannerNumber.nextInt ();
-                switch (menu){
-                    case 1:
-                        System.out.println (readFile ());
-                        break;
-                    case 2:
-                        adingTheProduct ();
-                        break;
-                    case 3:
-                        System.out.println ("The list is empty!");
-                        break;
-                    case 4:
+            menu = scannerNumber.nextInt ();
+            switch (menu) {
+                case 1:
+                    List<ProductDetail> lineProduct = AddingNewProduct.readFile ();
+                    lineProduct.forEach (System.out::println);
+                    break;
+                case 2:
+                    adingTheProduct ();
+                    break;
+                case 3:
+                    System.out.println ("The list is empty!");
+                    break;
+                case 4:
 
-                        break;
-                    case 5:
+                    break;
+                case 5:
 
-                        break;
-                    case 6:
-                        System.out.println ("Tank you for using the application!");
-                        break;
-                    default:
-                        System.out.println ("The number is not valid!" +
-                                "\n Please try again!");
-                        break;
-                }
+                    break;
+                case 6:
+                    System.out.println ("Tank you for using the application!");
+                    break;
+                default:
+                    System.out.println ("The number is not valid!" +
+                            "\n Please try again!");
+                    break;
+            }
         }
     }
 }
