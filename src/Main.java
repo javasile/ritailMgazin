@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-import static products.AddingNewProduct.readFile;
-import static products.AddingNewProduct.writeFile;
+import static products.AddingNewProduct.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,7 +27,7 @@ public class Main {
                         System.out.println (readFile ());
                         break;
                     case 2:
-
+                        adingTheProduct ();
                         break;
                     case 3:
                         System.out.println ("The list is empty!");

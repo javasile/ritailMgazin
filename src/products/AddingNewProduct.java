@@ -12,9 +12,9 @@ public class AddingNewProduct {
     public static void adingTheProduct() {
         try {
 
-//            List<Treadmill>list = readFile ();
+            List<ProductDetail> list = readFile ();
             readFile ();
-//            writeFile (list);
+            writeFile (list);
 
         }catch (Exception e){
             e.printStackTrace ();
@@ -40,7 +40,7 @@ public class AddingNewProduct {
 
     }
 
-    public static void writeFile(List<Treadmill>list){
+    public static void writeFile(List<ProductDetail> list){
 
        ProductDetail newProduct = new  NewProduct().Product ();
        Object listOfProducts = newProduct.toString ();
