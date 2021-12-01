@@ -12,9 +12,9 @@ public class AddingNewProduct {
     public static void adingTheProduct() {
         try {
 
-//            List<Treadmill>list = readFile ();
+            List<ProductDetail> list = readFile ();
             readFile ();
-//            writeFile (list);
+            writeFile (list);
 
         }catch (Exception e){
             e.printStackTrace ();
@@ -29,7 +29,7 @@ public class AddingNewProduct {
         try {
 
             Files.lines(Path.of (productDoc ))
-                    .map(line -> line.split ("||"))
+                    .map(line -> line.split (" :.: "))
                     .map (line -> new ProductDetail (Integer.parseInt (line[0]), line[1], (Double.parseDouble (line[2])), Integer.parseInt (line[3]), line[4], line[5], line[6], line[7], line[8]))
                     .forEach (list::add);
 
@@ -40,7 +40,7 @@ public class AddingNewProduct {
 
     }
 
-    public static void writeFile(List<Treadmill>list){
+    public static void writeFile(List<ProductDetail> list){
 
        ProductDetail newProduct = new  NewProduct().Product ();
        Object listOfProducts = newProduct.toString ();
