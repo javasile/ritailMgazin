@@ -105,13 +105,13 @@ public class ProductDetail {
     @Override
     public String toString() {
         return  SKU +
-                "||" + productName  +
-                "||" + price +
-                "||" + stock +
-                "||" + category  +
-                "||" + brand  +
-                "||" + size  +
-                "||" + color  +
-                "||" + description;
+                " :.: " + productName  +
+                " :.: " + price +
+                " :.: " + stock +
+                " :.: " + category  +
+                " :.: " + brand  +
+                " :.: " + size  +
+                " :.: " + color  +
+                " :.: " + description;
     }
 }

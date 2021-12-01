@@ -25,7 +25,7 @@ public class Main {
                 menu = scannerNumber.nextInt ();
                 switch (menu){
                     case 1:
-                        readFile ();
+                        System.out.println (readFile ());
                         break;
                     case 2:
 

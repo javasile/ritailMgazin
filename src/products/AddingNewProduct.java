@@ -29,7 +29,7 @@ public class AddingNewProduct {
         try {
 
             Files.lines(Path.of (productDoc ))
-                    .map(line -> line.split ("||"))
+                    .map(line -> line.split (" :.: "))
                     .map (line -> new ProductDetail (Integer.parseInt (line[0]), line[1], (Double.parseDouble (line[2])), Integer.parseInt (line[3]), line[4], line[5], line[6], line[7], line[8]))
                     .forEach (list::add);
 
