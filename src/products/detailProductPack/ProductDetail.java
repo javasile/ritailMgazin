@@ -1,16 +1,16 @@
-package products;
+package products.detailProductPack;
 
 public class ProductDetail {
 
-    private int SKU;
-    private String productName;
-    private double price;
-    private int stock;
-    private String category;
-    private String brand;
-    private String size;
-    private String color;
-    private String description;
+    int SKU;
+     String productName;
+     double price;
+     int stock;
+     String category;
+     String brand;
+     String size;
+     String color;
+     String description;
 
     public ProductDetail(int SKU, String productName, double price, int stock, String category, String brand, String size, String color, String description) {
         this.SKU = SKU;
@@ -29,25 +29,13 @@ public class ProductDetail {
     }
 
 
-    public int getStock() {
-        return stock;
-    }
-
     public void setStock(int stock) {
         this.stock = stock;
     }
 
 
-    public int getSKU() {
-        return SKU;
-    }
-
     public void setSKU(int SKU) {
         this.SKU = SKU;
-    }
-
-    public String getProductName() {
-        return productName;
     }
 
     public void setProductName(String productName) {
@@ -62,41 +50,23 @@ public class ProductDetail {
         this.price = price;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
     public void setCategory(String category) {
         this.category = category;
-    }
-
-    public String getBrand() {
-        return brand;
     }
 
     public void setBrand(String brand) {
         this.brand = brand;
     }
 
-    public String getSize() {
-        return size;
-    }
-
     public void setSize(String size) {
         this.size = size;
     }
 
-    public String getColor() {
-        return color;
-    }
 
     public void setColor(String color) {
         this.color = color;
     }
 
-    public String getDescription() {
-        return description;
-    }
 
     public void setDescription(String description) {
         this.description = description;

@@ -1,4 +1,5 @@
-package products;
+package products.detailProductPack;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -7,15 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddingNewProduct {
-    public static final String productDoc = "src/products/ProductList";
+    public static final String productDoc = "src/products/detailProductPack/ProductList";
 
     public static void adingTheProduct() {
         try {
-
             List<ProductDetail> list = readFile ();
             readFile ();
             writeFile (list);
-
         }catch (Exception e){
             e.printStackTrace ();
         }
@@ -24,7 +23,6 @@ public class AddingNewProduct {
     public static List<ProductDetail> readFile() {
 
         List<ProductDetail> list = new ArrayList<> ();
-
 
         try {
 

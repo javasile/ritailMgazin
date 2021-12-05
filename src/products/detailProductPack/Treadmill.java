@@ -1,4 +1,4 @@
-package products;
+package products.detailProductPack;
 
 public class Treadmill {
     private String inventarNumber;
